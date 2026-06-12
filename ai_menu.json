@@ -1,0 +1,13 @@
+{
+"title": "AI Level Editor",
+"buttons": [
+"Generate Level",
+"Generate From Prompt",
+"Analyze Difficulty",
+"Auto Decorate",
+"Generate Bossfight",
+"Optimize Objects",
+"Simulate Player",
+"AI Settings"
+]
+}
