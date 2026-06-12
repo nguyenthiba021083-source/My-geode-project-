@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.21)
 
 project(AILevelEditor VERSION 1.0.0)
 
-find_package(Geode REQUIRED)
+find_package(Geode REQUIRED CONFIG)
 
 include(${Geode_DIR}/Geode.cmake)
 
