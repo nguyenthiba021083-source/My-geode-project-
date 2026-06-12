@@ -2,7 +2,6 @@
 #include <Geode/modify/EditorUI.hpp>
 
 #include "ui/AIPopup.hpp"
-
 using namespace geode::prelude;
 
 class $modify(AIEditorUI, EditorUI) {
@@ -36,5 +35,9 @@ class $modify(AIEditorUI, EditorUI) {
 
     void onAI(CCObject*) {
         AIPopup::create()->show();
+        target_include_directories(${PROJECT_NAME}
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+
     }
 };
