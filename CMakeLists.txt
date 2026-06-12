@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.21)
 
 project(AILevelEditor VERSION 1.0.0)
 
-# Geode SDK
 find_package(Geode REQUIRED)
 
 add_library(${PROJECT_NAME} SHARED
