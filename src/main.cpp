@@ -1,43 +1,10 @@
-#include <Geode/Geode.hpp>
-#include <Geode/modify/EditorUI.hpp>
+cmake_minimum_required(VERSION 3.21)
 
-#include "ui/AIPopup.hpp"
-using namespace geode::prelude;
+project(AILevelEditor VERSION 1.0.0)
 
-class $modify(AIEditorUI, EditorUI) {
-    bool init(LevelEditorLayer* editor) {
-        if (!EditorUI::init(editor))
-            return false;
+add_library(${PROJECT_NAME}
+src/main.cpp
+src/ui/AIPopup.cpp
+)
 
-        auto menu = this->getButtonMenu();
-        if (!menu)
-            return true;
-
-        auto sprite =
-            CCSprite::createWithSpriteFrameName(
-                "GJ_plusBtn_001.png"
-            );
-
-        auto btn =
-            CCMenuItemSpriteExtra::create(
-                sprite,
-                this,
-                menu_selector(AIEditorUI::onAI)
-            );
-
-        btn->setScale(0.8f);
-        btn->setPosition({220.f, 100.f});
-
-        menu->addChild(btn);
-
-        return true;
-    }
-
-    void onAI(CCObject*) {
-        AIPopup::create()->show();
-        target_include_directories(${PROJECT_NAME}
-    PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/src
-
-    }
-};
+setup_geode_mod(${PROJECT_NAME})
