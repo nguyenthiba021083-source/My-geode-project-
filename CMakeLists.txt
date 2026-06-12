@@ -2,12 +2,7 @@ cmake_minimum_required(VERSION 3.21)
 
 project(AILevelEditor VERSION 1.0.0)
 
-find_package(Geode REQUIRED)
-
-add_library(${PROJECT_NAME} SHARED)
-
-target_sources(${PROJECT_NAME}
-PRIVATE
+add_library(${PROJECT_NAME}
 src/main.cpp
 src/ui/AIPopup.cpp
 )
