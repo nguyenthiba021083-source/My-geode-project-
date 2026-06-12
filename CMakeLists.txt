@@ -4,6 +4,8 @@ project(AILevelEditor VERSION 1.0.0)
 
 find_package(Geode REQUIRED)
 
+include(${Geode_DIR}/Geode.cmake)
+
 add_library(${PROJECT_NAME} SHARED
     src/main.cpp
     src/ui/AIPopup.cpp
